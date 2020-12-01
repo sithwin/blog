@@ -12,9 +12,8 @@ async function makeCommit(date, commits) {
 
   try {
     // Make the commits
-    for (const commit of commits) {
+    const commit = commits[Math.floor(Math.random() * commits.length)];
       await git.add('./*').commit(commit, {'--allow-empty': null});
-    }
     // Push the commits to the remote repository
     await git.push();
     console.log(`Committed and pushed ${commits.length} commits for ${dateString} successfully!`);
@@ -34,8 +33,8 @@ async function makeCommitsForDateRange(startDate, endDate, commits) {
 }
 
 // Usage example
-const startDate = new Date('2021-12-01T12:00:00Z');
-const endDate = new Date('2021-12-26T12:00:00Z');
+const startDate = new Date('2020-12-01T12:00:00Z');
+const endDate = new Date('2020-12-10T12:00:00Z');
 const commits = [
   'Added new feature for user authentication',
   'Fixed bug causing incorrect display of search results',

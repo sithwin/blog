@@ -33,29 +33,12 @@ async function makeCommitsForDateRange(startDate, endDate, commits) {
 }
 
 // Usage example
-const startDate = new Date('2020-12-18T12:00:00Z');
-const endDate = new Date('2020-12-26T12:00:00Z');
+const startDate = new Date('2020-12-14T12:00:00Z');
+const endDate = new Date('2020-12-15T12:00:00Z');
 const commits = [
-  'Added new feature for user authentication',
-  'Fixed bug causing incorrect display of search results',
-  'Refactored code for improved readability and maintainability',
-  'Implemented caching for faster page load times',
-  'Updated documentation to reflect latest changes',
-  'Resolved conflict in merge of development branch',
-  'Added unit tests for increased code coverage',
-  'Improved error handling for more informative error messages',
-  'Optimized database queries for better performance',
-  'Removed deprecated code to streamline application functionality',
-  'Implemented responsive design for better mobile compatibility',
-  'Fixed security vulnerability by updating library version',
-  'Updated third-party API integration to support latest version',
-  'Implemented user feedback feature to gather user suggestions',
-  'Refactored CSS for more efficient stylesheets',
-  'Added feature to allow users to reset their passwords',
-  'Improved logging for easier debugging',
-  'Added validation for user input to prevent data corruption',
-  'Fixed cross-browser compatibility issues for better user experience',
-  'Added feature to allow users to upload profile pictures'
+  'Added new logic',
+  'Refactored posts component',
+  'Modified post list'
 ];
 
 makeCommitsForDateRange(startDate, endDate, commits);

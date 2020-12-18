@@ -1,18 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { randomBytes } = require('crypto');
+const { request } = require('express');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
-// Object
 const posts = {}; // List of the posts
-/*
-client 
- {
-     title = "abc"
- }
-*/
 
 app.get('/posts/', (request, response) => {
     console.log('Getting posts');

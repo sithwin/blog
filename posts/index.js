@@ -44,5 +44,6 @@ app.post("/events", (request, response) => {
 });
 
 app.listen(4000, () => {
+  console.log("Version V3");
   console.log("Listening on 4000 (Post Service)");
 });

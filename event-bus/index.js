@@ -16,7 +16,7 @@ app.post("/events", (request, response) => {
   axios.post("http://post-clusterip-service:4000/events", event); // Post Service running
   axios.post("http://comments-service:4001/events", event); // Comment Service
   axios.post("http://query-service:4002/events", event); // Query Service
-  axios.post("http://moderation:4003/events", event); // Moderation Service
+  axios.post("http://moderation-service:4003/events", event); // Moderation Service
 
   response.send({ status: "OK" });
 });

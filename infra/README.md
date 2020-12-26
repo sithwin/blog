@@ -32,3 +32,6 @@ Update, your pod manifest as shown above and then run:
 kubectl apply -f infra/k8s/
 
 https://minikube.sigs.k8s.io/docs/commands/docker-env/
+
+cheat sheet
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/

@@ -35,3 +35,10 @@ https://minikube.sigs.k8s.io/docs/commands/docker-env/
 
 cheat sheet
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+Load Balancer:
+mandatory
+https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+
+deploy
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.42.0/deploy/static/provider/cloud/deploy.yaml

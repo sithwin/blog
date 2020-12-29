@@ -33,8 +33,8 @@ async function makeCommitsForDateRange(startDate, endDate, commits) {
 }
 
 // Usage example
-const startDate = new Date('2020-12-14T12:00:00Z');
-const endDate = new Date('2020-12-15T12:00:00Z');
+const startDate = new Date('2020-12-29T12:00:00Z');
+const endDate = new Date('2020-12-30T12:00:00Z');
 const commits = [
   'Added new logic',
   'Refactored posts component',

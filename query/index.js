@@ -10,10 +10,12 @@ app.use(cors());
 const posts = {};
 
 app.get("/posts", (request, response) => {
+  console.log("Getting Query Service !!!", request);
   response.send(posts);
 });
 
 app.post("/events", (request, response) => {
+  console.log("Reached Query Service !!!", request);
   const { type, data } = request.body;
 
   handleEvent(type, data);

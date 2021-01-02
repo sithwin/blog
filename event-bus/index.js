@@ -11,6 +11,8 @@ const events = [];
 app.post("/events", (request, response) => {
   const event = request.body;
 
+  console.log("Reached Event Bus!!!");
+
   events.push(event);
 
   axios.post("http://post-clusterip-service:4000/events", event); // Post Service running

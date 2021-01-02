@@ -16,7 +16,7 @@ app.get("/posts/", (request, response) => {
   response.status(200).send(posts);
 });
 
-app.post("/posts/", async (request, response) => {
+app.post("/posts/create", async (request, response) => {
   console.log("Post request");
   const id = randomBytes(4).toString("hex");
   const { title } = request.body;

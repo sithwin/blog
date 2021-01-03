@@ -16,7 +16,7 @@ app.get("/posts/", (request, response) => {
   response.status(200).send(posts);
 });
 
-app.post("/posts/", async (request, response) => {
+app.post("/posts/create", async (request, response) => {
   console.log("Post request");
   const id = randomBytes(4).toString("hex");
   const { title } = request.body;
@@ -26,7 +26,7 @@ app.post("/posts/", async (request, response) => {
     title,
   };
 
-  await axios.post("http://localhost:4005/events", {
+  await axios.post("http://event-bus-service:4005/events", {
     type: "PostCreated",
     data: {
       id,
@@ -44,5 +44,6 @@ app.post("/events", (request, response) => {
 });
 
 app.listen(4000, () => {
+  console.log("Version V3");
   console.log("Listening on 4000 (Post Service)");
 });

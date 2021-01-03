@@ -10,10 +10,12 @@ app.use(cors());
 const posts = {};
 
 app.get("/posts", (request, response) => {
+  console.log("Getting Query Service !!!", request);
   response.send(posts);
 });
 
 app.post("/events", (request, response) => {
+  console.log("Reached Query Service !!!", request);
   const { type, data } = request.body;
 
   handleEvent(type, data);
@@ -24,7 +26,7 @@ app.post("/events", (request, response) => {
 app.listen(4002, async () => {
   console.log("Listening port 4002 (Query Service)");
 
-  const res = await axios.get("http://localhost:4005/events");
+  const res = await axios.get("http://event-bus-service:4005/events");
 
   for (let event of res.data) {
     console.log("Processing events:", event.type);
